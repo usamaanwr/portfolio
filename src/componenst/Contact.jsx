@@ -1,8 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { emailjs } from '@emailjs/browser';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
 
 const Contact = () => {
+const form = useRef();
+const sendEmail = (e)=>{
+    e.preventDefault();
+
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    emailjs.sendForm(SERVICE_ID , TEMPLATE_ID , form.current , PUBLIC_KEY)
+    .then((result)=>{
+        console.log("Succces" , result.text);
+        alert("Message sent successfully!")
+        e.target.reset()
+    }, (error)=>{
+        console.log("FAILED...", error.text);
+          alert("Failed to send message. Please try again.");
+    })
+}
+
   return (
     <section id="contact" className="py-24 bg-[#0a0a0a] px-6 lg:px-20 border-t border-white/5">
       <div className="container mx-auto max-w-6xl">
@@ -56,7 +76,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7"
           >
-            <form className="bg-[#141414] border border-white/10 p-8 lg:p-10 rounded-[2.5rem] shadow-2xl space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="bg-[#141414] border border-white/10 p-8 lg:p-10 rounded-[2.5rem] shadow-2xl space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="form-control">
                   <label className="label"><span className="label-text text-slate-400 font-bold uppercase text-[10px]">Your Name</span></label>
