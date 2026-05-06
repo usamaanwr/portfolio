@@ -34,7 +34,7 @@ emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
         {/* Header */}
         <div className="mb-16 text-center lg:text-left">
           <h2 className="text-sm font-mono text-blue-500 tracking-[0.3em] uppercase mb-2">Connect</h2>
-          <h3 className="text-4xl lg:text-5xl font-black text-white italic">LET'S TALK</h3>
+          <h3 className="text-4xl lg:text-5xl font-black text-white ">LET'S TALK</h3>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12">
