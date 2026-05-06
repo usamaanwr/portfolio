@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import About from '../componenst/About';
-import { Education } from '../componenst/Education';
-import Skills from '../componenst/Skills';
-import Projects from '../componenst/Projects';
-import Contact from '../componenst/Contact';
-import Footer from '../componenst/Footer';
+import About from '../components/About';
+import { Education } from '../components/Education';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Hero = () => {
   return (
     <>
     <section id="home" className="min-h-screen flex items-center bg-[#0a0a0a] px-6 lg:px-20 relative overflow-hidden">
       
-      <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center z-10">
+      <div className="container max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center z-10">
         
         {/* Left Side: Compact & Clean Text */}
         <motion.div 
@@ -29,9 +29,9 @@ const Hero = () => {
             Aspiring developer focusing on full-stack web applications. Specializing in React, Node.js, and MongoDB.
           </p>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             <a 
-              href="src\assets\Muhammad Osama.pdf" 
+              href="public\assets\Muhammad Osama.pdf" 
               download="Muhammad Osama.pdf"
               className="btn bg-white hover:bg-slate-200 text-black border-none px-10 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
@@ -44,7 +44,7 @@ const Hero = () => {
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 3 }}
           className="flex justify-center lg:justify-end"
         >
           <div className="relative">
@@ -52,9 +52,9 @@ const Hero = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-white/20 rounded-full blur-md opacity-75 group-hover:opacity-100 transition duration-1000"></div>
             
             {/* The Image Container */}
-            <div className="relative w-[320px] h-[320px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-2 border-white/10">
+            <div className="relative w-[320px] h-[320px] lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden border-4 border-white/10">
               <img 
-                src="src/assets/osama.png" // Apni pic ka link yahan lagayein
+                src="public/assets/osama.png" // Apni pic ka link yahan lagayein
                 alt="Osama"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
               />
