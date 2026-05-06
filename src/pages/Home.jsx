@@ -31,7 +31,7 @@ const Hero = () => {
 
           <div className="flex items-center gap-4">
             <a 
-              href="public\assets\Muhammad Osama.pdf" 
+              href="/assets/Muhammad-Osama.pdf" 
               download="Muhammad Osama.pdf"
               className="btn bg-white hover:bg-slate-200 text-black border-none px-10 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
@@ -54,7 +54,7 @@ const Hero = () => {
             {/* The Image Container */}
             <div className="relative w-[320px] h-[320px] lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden border-4 border-white/10">
               <img 
-                src="public/assets/osama.png" // Apni pic ka link yahan lagayein
+                src="/assets/osama.png" // Apni pic ka link yahan lagayein
                 alt="Osama"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
               />
