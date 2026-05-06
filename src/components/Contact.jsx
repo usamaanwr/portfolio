@@ -80,7 +80,7 @@ emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
             transition={{ duration: 0.8 }}
             className="lg:col-span-7"
           >
-            <form ref={Form} onSubmit={sendEmail} className="bg-[#141414] border border-white/10 p-8 lg:p-10 rounded-[2.5rem] shadow-2xl space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="bg-[#141414] border border-white/10 p-8 lg:p-10 rounded-[2.5rem] shadow-2xl space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="form-control">
                   <label className="label"><span className="label-text text-slate-400 font-bold uppercase text-[10px]">Your Name</span></label>
