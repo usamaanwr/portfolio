@@ -31,7 +31,7 @@ const Hero = () => {
 
           <div className="flex items-center gap-4">
             <a 
-              href="/assets/Muhammad-Osama.pdf" 
+              href="/assets/Muhammad Osama.pdf" 
               download="Muhammad Osama.pdf"
               className="btn bg-white hover:bg-slate-200 text-black border-none px-10 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
