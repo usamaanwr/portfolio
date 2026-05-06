@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './componenst/Navbar'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import {  HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './componenst/About'
+import About from './components/About'
 
 
 
@@ -11,12 +11,12 @@ function App() {
  
   return (
     
-    <BrowserRouter>
+    <HashRouter>
     <Navbar /> 
     <Routes>
       <Route path='/' element={<Home />}/>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
 
    
   )
