@@ -1,36 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-import  emailjs  from '@emailjs/browser';
-import { FiMail, FiPhone,  FiSend } from 'react-icons/fi';
+import emailjs from '@emailjs/browser';
+import { FiMail, FiPhone, FiSend } from 'react-icons/fi';
 import { Form } from 'react-router-dom';
 
 const Contact = () => {
-const form = useRef();
-const sendEmail = (e)=>{
+  const [isSending, setIsSending] = useState(false);
+  const [buttonText, setButtonText] = useState("Send Message")
+  const form = useRef();
+  const sendEmail = (e) => {
     e.preventDefault();
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+const formData = new FormData(form.current);
+  
+  // .trim() check karta hai ke sirf spaces toh nahi hain
+  if (formData.get('message').trim() === "") {
+    setButtonText("Message cannot be empty! ❌");
+    setTimeout(() => setButtonText("Send Message"), 2000);
+    return;
+  }
+    setIsSending(true)
+    setButtonText("Sending...")
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-    console.log(SERVICE_ID);
-    
     const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    emailjs.sendForm(SERVICE_ID , TEMPLATE_ID , form.current , PUBLIC_KEY)
-    
-    .then((result)=>{
-        console.log("Succces" , result.text);
-        alert("Message sent successfully!")
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+
+      .then((result) => {
+        setIsSending(false)
+        setButtonText("Message Sent successfully!")
         e.target.reset()
-    }, (error)=>{
-        console.log("FAILED...", error.text);
-          alert("Failed to send message. Please try again.");
-    })
-}
+
+        setTimeout(() => setButtonText("Send Message"), 3000)
+      })
+      .catch((error) => {
+        setIsSending(false);
+        setButtonText("Error!")
+        setTimeout(() => setButtonText("Send Message"), 3000);
+      })
+  }
 
   return (
     <section id="contact" className="py-24 bg-[#0a0a0a] px-6 lg:px-20 border-t border-white/5">
       <div className="container max-w-6xl mx-auto px-6">
-        
+
         {/* Header */}
         <div className="mb-16 text-center lg:text-left">
           <h2 className="text-sm font-mono text-blue-500 tracking-[0.3em] uppercase mb-2">Connect</h2>
@@ -38,9 +52,9 @@ emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12">
-          
+
           {/* Left Side: Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -74,7 +88,7 @@ emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
           </motion.div>
 
           {/* Right Side: Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -84,23 +98,34 @@ emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="form-control">
                   <label className="label"><span className="label-text text-slate-400 font-bold uppercase text-[10px]">Your Name</span></label>
-                  <input type="text" placeholder="Your Name" name='name' className="input bg-[#0a0a0a] border-white/5 focus:border-blue-600 focus:outline-none rounded-xl text-white w-full h-14" />
+                  <input type="text" placeholder="Your Name" name='from_name' required className="input bg-[#0a0a0a] border-white/5 focus:border-blue-600 focus:outline-none rounded-xl text-white w-full h-14" />
                 </div>
                 <div className="form-control">
                   <label className="label"><span className="label-text text-slate-400 font-bold uppercase text-[10px]">Email Address</span></label>
-                  <input type="email" placeholder="Your email" name='email' className="input bg-[#0a0a0a] border-white/5 focus:border-blue-600 focus:outline-none rounded-xl text-white w-full h-14" />
+                  <input type="email" placeholder="Your email" name='from_email' required className="input bg-[#0a0a0a] border-white/5 focus:border-blue-600 focus:outline-none rounded-xl text-white w-full h-14" />
                 </div>
               </div>
 
               <div className="form-control">
                 <label className="label"><span className="label-text text-slate-400 font-bold uppercase text-[10px]">Your Message</span></label>
-                <textarea className="textarea bg-[#0a0a0a] border-white/5 focus:border-blue-600 focus:outline-none rounded-xl text-white w-full h-32 resize-none" placeholder="Tell me about your project..." name='message'></textarea>
+                <textarea className="textarea bg-[#0a0a0a] border-white/5 focus:border-blue-600 focus:outline-none rounded-xl text-white w-full h-32 resize-none" required placeholder="Tell me about your project..." name='message'></textarea>
               </div>
 
-              <button className="btn bg-white hover:bg-slate-200 text-black border-none w-full h-14 rounded-xl font-black text-lg transition-all group">
-                SEND MESSAGE
-                <FiSend className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </button>
+             <button 
+  type="submit" 
+  disabled={isSending}
+  className="btn bg-white hover:bg-slate-200 text-black border-none w-full h-14 rounded-xl font-black text-lg transition-all group flex items-center justify-center disabled:bg-slate-400 disabled:cursor-not-allowed"
+>
+  {/* Agar sending ho rahi hai toh spinner dikhao, warna text */}
+  {isSending ? (
+    <div className="w-6 h-6 border-4 border-black/20 border-t-black rounded-full animate-spin"></div>
+  ) : (
+    <>
+      {buttonText}
+      <FiSend className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+    </>
+  )}
+</button>
             </form>
           </motion.div>
 
