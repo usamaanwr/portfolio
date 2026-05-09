@@ -54,8 +54,8 @@ const Skills = () => {
         >
           <p className="text-slate-400">
             Specializing in building full-cycle applications with 
-            <span className="text-white font-bold ml-1 text-nowrap">Centralized State Management (Redux)</span> 
-            and <span className="text-white font-bold ml-1 text-nowrap">Scalable Backend Logic</span>.
+            <span className="text-white font-bold ml-1 text-wrap">Centralized State Management (Redux)</span> 
+            and <span className="text-white font-bold ml-1 text-wrap">Scalable Backend Logic</span>.
           </p>
         </motion.div>
 

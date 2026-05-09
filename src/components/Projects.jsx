@@ -36,7 +36,7 @@ const Projects = () => {
                 </div>
 
                 {/* Project Title & Simple English Description */}
-                <h4 className="text-2xl font-black text-white mb-4 italic leading-tight">{project.title}</h4>
+                <h4 className="text-2xl font-black text-white mb-4  leading-tight">{project.title}</h4>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6">
                   {project.description}
                 </p>

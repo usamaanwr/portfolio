@@ -11,7 +11,7 @@ const Footer = () => {
           
           {/* Brand Name */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-black text-white italic tracking-tighter">
+            <h2 className="text-2xl font-black text-white  tracking-tighter">
               OSAMA<span className="text-blue-600">.</span>
             </h2>
             <p className="text-slate-500 text-sm mt-2 font-medium">

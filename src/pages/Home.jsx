@@ -12,7 +12,7 @@ const Hero = () => {
     <>
     <section id="home" className="min-h-screen flex items-center bg-[#0a0a0a] px-6 lg:px-20 relative overflow-hidden">
       
-      <div className="container max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center z-10">
+      <div className="container max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 justify-center z-10">
         
         {/* Left Side: Compact & Clean Text */}
         <motion.div 
@@ -54,7 +54,7 @@ const Hero = () => {
             {/* The Image Container */}
             <div className="relative w-[320px] h-[320px] lg:w-[340px] lg:h-[340px] rounded-full overflow-hidden border-4 border-white/10">
               <img 
-                src="/assets/osama.png" // Apni pic ka link yahan lagayein
+                src="/assets/osama.png" 
                 alt="Osama"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
               />
