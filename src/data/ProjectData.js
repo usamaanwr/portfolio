@@ -11,15 +11,15 @@ const projectData = [
       title: "Property Management Portal",
       description: "A full-stack solution for managing properties, including user authentication and real-time updates.",
       tech: ["Next.js", "Node.js", "Express", "MongoDB"],
-      link: "#",
-      github: "#"
+      link: "https://property-management-system-lac.vercel.app/",
+      github: "https://github.com/usamaanwr/PropertyManagementSystem"
     },
     {
       title: "YouTube Backend System",
       description: "A robust backend project involving user registration, secure login, and video history tracking.",
       tech: ["Node.js", "Express", "MongoDB", "JWT"],
-      link: "#",
-      github: "#"
+      link: "https://github.com/usamaanwr/Youtube-Backend-Project",
+      github: "https://github.com/usamaanwr/Youtube-Backend-Project"
     }
   ];
 
