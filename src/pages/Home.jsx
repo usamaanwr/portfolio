@@ -30,8 +30,8 @@ Full-Stack Web Developer building modern web applications, specializing in React
 
             <div className="flex items-center gap-4">
               <a
-                href="/assets/Muhammad Osama.pdf"
-                download="Muhammad Osama.pdf"
+                href="/assets/Muhammad-Osama (2).pdf"
+                download="Muhammad-Osama (2).pdf"
                 className="btn bg-white hover:bg-slate-200 text-black border-none px-10 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
                 Download CV
