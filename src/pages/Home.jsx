@@ -12,8 +12,7 @@ const Hero = () => {
     <>
       <section id="home" className="min-h-screen flex items-center bg-[#0a0a0a] px-6 lg:px-20 relative overflow-hidden">
 
-        <div className="container max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 justify-center z-10">
-
+<div className="container max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center justify-between z-10 w-full">
           {/* Left Side: Compact & Clean Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,7 +31,7 @@ Full-Stack Web Developer building modern web applications, specializing in React
               <a
                 href="/assets/Muhammad-Osama (2).pdf"
                 download="Muhammad-Osama (2).pdf"
-                className="btn bg-white hover:bg-slate-200 text-black border-none px-10 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                className="btn bg-white hover:bg-slate-200 mb-10 text-black border-none px-10 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
                 Download CV
               </a>
