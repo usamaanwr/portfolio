@@ -25,6 +25,22 @@ const projectData = [
     github: "https://github.com/usamaanwr/authentication",
   },
   {
+   title: "ARCO Bath – Luxury E-Commerce Framework",
+  description:
+    "A high-end architectural sanitary ware platform engineered with an e-commerce-inspired UI framework. Developed as a lightning-fast static experience incorporating a dynamic video reel component (Showroom Stories) for product immersion, DaisyUI for sleek theme consistency, and complete form automation via Web3Forms integration.",
+  tech: [
+    "React.js",
+    "Vite",
+    "Tailwind CSS",
+    "DaisyUI",
+    "Web3Forms API",
+    "React Icons",
+    "Cloudinary (Media)"
+  ],
+    link: "https://arco-bath.com/",
+    github: "https://github.com/usamaanwr/sanitaryStore",
+  },
+  {
     title: "YouTube Backend System",
     description:
       "A robust backend project involving user registration, secure login, and video history tracking.",
