@@ -40,14 +40,15 @@ const projectData = [
     link: "https://arco-bath.com/",
     github: "https://github.com/usamaanwr/sanitaryStore",
   },
-  {
-    title: "YouTube Backend System",
-    description:
-      "A robust backend project involving user registration, secure login, and video history tracking.",
-    tech: ["Node.js", "Express", "MongoDB", "JWT"],
-    link: "https://github.com/usamaanwr/Youtube-Backend-Project",
-    github: "https://github.com/usamaanwr/Youtube-Backend-Project",
-  },
+ {
+  title: "Real Estate App",
+  description:
+    "A full-stack property listing platform with role-based access (Admin, Agent, Seller, Buyer), JWT auth, property booking system, forgot password via OTP, and AI-powered property search.",
+  tech: ["Next.js", "Node.js", "Express", "MongoDB", "Cloudinary", "OpenAI"],
+  link: '',
+  github: "https://github.com/usamaanwr/real-estate-app.git",
+  status: "under development",
+},
 ];
 
 export default projectData;
