@@ -43,11 +43,11 @@ const projectData = [
  {
   title: "Real Estate App",
   description:
-    "A full-stack property listing platform with role-based access (Admin, Agent, Seller, Buyer), JWT auth, property booking system, forgot password via OTP, and AI-powered property search.",
+"A full-stack real estate platform featuring role-based access (Admin, Agent, Seller, Buyer), JWT authentication with refresh tokens, property listings with Cloudinary image uploads, booking system, and OTP-based password recovery. 🚧 Coming Soon",
   tech: ["Next.js", "Node.js", "Express", "MongoDB", "Cloudinary", "OpenAI"],
   link: '',
   github: "https://github.com/usamaanwr/real-estate-app.git",
-  status: "under development",
+  
 },
 ];
 
