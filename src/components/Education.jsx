@@ -2,7 +2,8 @@ export const Education = () => {
   const eduData = [
     { degree: "Matriculation (Science)", institute: "Board of Secondary Education Karachi", year: "2018" },
     { degree: "Intermediate (Pre-Engineering)", institute: "Ziauddin Examination Board", year: "2023" },
-    { degree: "Full Stack MERN Development", institute: "Saylani Mass IT Training (SMIT) – IT Education in Pakistan", year: "2026" }
+    { degree: "BS Computer Science", institute: "Virtual University of Pakistan", year: "2026 - Present" },
+   { degree: "Full Stack MERN Development", institute: "Saylani Mass IT Training (SMIT) – IT Education in Pakistan", year: "2026" }
   ];
 
   return (
