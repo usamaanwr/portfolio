@@ -41,12 +41,12 @@ const projectData = [
     github: "https://github.com/usamaanwr/sanitaryStore",
   },
  {
-  title: "Real Estate App",
+  title: "estate-hub",
   description:
 "A full-stack real estate platform featuring role-based access (Admin, Agent, Seller, Buyer), JWT authentication with refresh tokens, property listings with Cloudinary image uploads, booking system, and OTP-based password recovery. 🚧 Coming Soon",
-  tech: ["Next.js", "Node.js", "Express", "MongoDB", "Cloudinary", "OpenAI"],
+  tech: ["Next.js", "Node.js", "Express", "postgreSQL", "Prisma ORM" , "Cloudinary", "OpenAI"],
   link: '',
-  github: "https://github.com/usamaanwr/real-estate-app.git",
+  github: "https://github.com/usamaanwr/estate-hub",
   
 },
 ];
