@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaLock } from 'react-icons/fa';
-import projectData from '../data/projectData'; // 👈 File path verify kar lena
-
+import projectData from '../data/ProjectData.js';
 // 💀 Skeleton Loader Component
 const ProjectSkeleton = () => {
   return (
