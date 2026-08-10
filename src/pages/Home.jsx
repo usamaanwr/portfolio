@@ -1,18 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
+// All Section Component Imports
 import About from '../components/About';
 import { Education } from '../components/Education';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
+import Services from '../components/Services';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const Hero = () => {
   return (
     <>
+      {/* Home / Hero Section */}
       <section id="home" className="min-h-screen flex items-center bg-[#0a0a0a] px-6 lg:px-20 relative overflow-hidden">
-
-<div className="container max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center justify-between z-10 w-full">
+        <div className="container max-w-6xl mx-auto px-6 flex flex-col-reverse lg:flex-row gap-16 items-center justify-between z-10 w-full">
+          
           {/* Left Side: Compact & Clean Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +29,8 @@ const Hero = () => {
               <span className="text-slate-500">Developer</span>
             </h1>
             <p className="text-slate-400 text-base max-w-sm mb-10 leading-relaxed">
-Full-Stack Web Developer building modern web applications, specializing in React, Next.js, Node.js, and MongoDB.            </p>
+              Full-Stack Web Developer building modern web applications, specializing in React, Next.js, Node.js, and MongoDB.
+            </p>
 
             <div className="flex items-center gap-4">
               <a
@@ -148,26 +153,14 @@ Full-Stack Web Developer building modern web applications, specializing in React
           </motion.div>
         </div>
       </section>
-      <section id='about'>
-        <About />
-      </section>
-      <section id='education'>
-        <Education />
-      </section>
 
-      <section id='skills'>
-        <Skills />
-      </section>
-
-      <section id='projects'>
-        <Projects />
-      </section>
-      <section id='contact'>
-        <Contact />
-      </section>
-      <section id='home'>
-        <Footer />
-      </section>
+      <About />
+      <Education />
+      <Skills />
+      <Projects />
+      <Services />
+      <Contact />
+      <Footer />
     </>
   );
 };

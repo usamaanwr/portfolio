@@ -1,61 +1,111 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { 
+  SiJavascript, 
+  SiTypescript, 
+  SiReact, 
+  SiNextdotjs, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiMongodb, 
+  SiPostgresql, 
+  SiPrisma, 
+  SiTailwindcss, 
+  SiHtml5 
+} from 'react-icons/si';
 
 const Skills = () => {
-  // MERN Stack Skills with percentage
-  const skillList = [
-    { name: "HTML / CSS", level: "90%" },
-    { name: "JavaScript", level: "85%" },
-    { name: "React.js", level: "80%" },
-    { name: "Next.js", level: "65%" },
-    { name: "Node.js / Express", level: "75%" },
-    { name: "MongoDB", level: "80%" },
-    { name: "Tailwind CSS", level: "90%" },
+  // Skill Categories with Icons and Progress Levels
+  const skillCategories = [
+    {
+      category: "Frontend Development",
+      skills: [
+        { name: "JavaScript (ES6+)", level: "85%", icon: <SiJavascript className="text-yellow-400" /> },
+        { name: "TypeScript", level: "75%", icon: <SiTypescript className="text-blue-500" /> },
+        { name: "React.js / Redux Toolkit", level: "85%", icon: <SiReact className="text-cyan-400" /> },
+        { name: "Next.js", level: "70%", icon: <SiNextdotjs className="text-white" /> },
+        { name: "Tailwind CSS & HTML5", level: "90%", icon: <SiTailwindcss className="text-sky-400" /> },
+      ]
+    },
+    {
+      category: "Backend & Databases",
+      skills: [
+        { name: "Node.js / Express.js", level: "80%", icon: <SiNodedotjs className="text-green-500" /> },
+        { name: "Prisma ORM", level: "80%", icon: <SiPrisma className="text-teal-300" /> },
+        { name: "PostgreSQL", level: "75%", icon: <SiPostgresql className="text-blue-400" /> },
+        { name: "MongoDB / Mongoose", level: "80%", icon: <SiMongodb className="text-emerald-500" /> },
+      ]
+    }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-[#0a0a0a] px-6 lg:px-20 border-t border-white/5">
-      <div className="container max-w-6xl mx-auto px-6">
+    <section id="skills" className="py-24 bg-[#0a0a0a] text-white px-6 lg:px-20 border-t border-slate-800/60 relative overflow-hidden">
+      
+      {/* Background Ambient Glow */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto z-10 relative">
         
         {/* Section Header */}
-        <div className="mb-16">
-          <h2 className="text-sm font-mono text-blue-500 tracking-[0.3em] uppercase mb-2 text-center">Expertise</h2>
-          <h3 className="text-4xl lg:text-5xl font-black text-white text-center ">TECHNICAL SKILLS</h3>
+        <div className="text-center mb-16">
+          <p className="text-blue-500 font-mono tracking-[0.2em] mb-3 text-sm uppercase">Expertise</p>
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-white">
+            Technical <span className="text-slate-500">Skills</span>
+          </h2>
+          <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-          {skillList.map((skill, index) => (
-            <div key={index} className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-white font-bold tracking-wide uppercase text-sm">{skill.name}</span>
-                <span className="text-slate-500 font-mono text-xs">{skill.level}</span>
-              </div>
-              
-              {/* Range Track */}
-              <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                {/* Animated Fill */}
-                <motion.div 
-                  initial={{ width: 0 }}
-                  whileInView={{ width: skill.level }}
-                  transition={{ duration: 1.5, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                  className="h-full bg-blue-600 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.4)]"
-                />
+        {/* Skills Two-Column Layout */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {skillCategories.map((cat, catIndex) => (
+            <div 
+              key={catIndex} 
+              className="bg-[#121212] border border-slate-800/80 p-8 rounded-2xl relative"
+            >
+              <h3 className="text-xl font-bold mb-8 text-white border-b border-slate-800/80 pb-4 flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                {cat.category}
+              </h3>
+
+              <div className="space-y-6">
+                {cat.skills.map((skill, index) => (
+                  <div key={index} className="space-y-2">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-slate-200 font-semibold tracking-wide flex items-center gap-2.5">
+                        <span className="text-lg">{skill.icon}</span>
+                        {skill.name}
+                      </span>
+                      <span className="text-blue-400 font-mono text-xs">{skill.level}</span>
+                    </div>
+                    
+                    {/* Animated Progress Bar */}
+                    <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800/50">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: skill.level }}
+                        transition={{ duration: 1.2, delay: index * 0.1, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full shadow-[0_0_12px_rgba(59,130,246,0.5)]"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Extra Info Box with Shadow Hover */}
+        {/* Bottom Feature Box */}
         <motion.div 
-          whileHover={{ y: -5 }}
-          className="mt-20 p-8 bg-[#141414] border border-white/5 rounded-[2rem] shadow-xl hover:shadow-blue-500/5 transition-all text-center"
+          whileHover={{ y: -4 }}
+          className="mt-12 p-8 bg-[#121212] border border-slate-800/80 rounded-2xl text-center max-w-4xl mx-auto hover:border-blue-500/40 transition-all duration-300"
         >
-          <p className="text-slate-400">
-            Specializing in building full-cycle applications with 
-            <span className="text-white font-bold ml-1 text-wrap">Centralized State Management (Redux)</span> 
-            and <span className="text-white font-bold ml-1 text-wrap">Scalable Backend Logic</span>.
+          <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+            Specializing in architecting full-stack applications with 
+            <span className="text-white font-semibold mx-1">TypeScript</span>, 
+            <span className="text-white font-semibold mx-1">Redux Toolkit</span> state management, and robust database layers using 
+            <span className="text-white font-semibold mx-1">PostgreSQL + Prisma ORM</span> & 
+            <span className="text-white font-semibold ml-1">MongoDB</span>.
           </p>
         </motion.div>
 
