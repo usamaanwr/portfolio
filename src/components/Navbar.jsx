@@ -23,6 +23,7 @@ function Navbar() {
               <li><a href="#education">Education</a></li>
               <li><a href="#skills">Skills</a></li>
               <li><a href="#projects">Projects</a></li>
+              <li><a href="#Services">Services</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -41,6 +42,7 @@ function Navbar() {
             <li><a href="#education" className="hover:text-white transition">Education</a></li>
             <li><a href="#skills"    className="hover:text-white transition">Skills</a></li>
             <li><a href="#projects"  className="hover:text-white transition">Projects</a></li>
+            <li><a href="#services"    className="hover:text-white transition">Services</a></li>
           </ul>
         </div>
 
