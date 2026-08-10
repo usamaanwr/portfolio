@@ -50,7 +50,7 @@ const Skills = () => {
         <div className="text-center mb-16">
           <p className="text-blue-500 font-mono tracking-[0.2em] mb-3 text-sm uppercase">Expertise</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white">
-            Technical <span className="text-slate-500">Skills</span>
+            Technical <span>Skills</span>
           </h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
         </div>
