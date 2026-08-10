@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 // All Section Component Imports
 import About from '../components/About';
-import { Education } from '../components/Education';
+import Education from '../components/Education';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Services from '../components/Services';
