@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaUniversity } from 'react-icons/fa';
 
-export const Education = () => {
+ const Education = () => {
   const eduData = [
     { 
       degree: "BS Computer Science", 
@@ -95,3 +95,5 @@ export const Education = () => {
     </section>
   );
 };
+
+export default Education
