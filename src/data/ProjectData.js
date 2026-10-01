@@ -11,8 +11,8 @@ const projectData = [
     "PWA",
     "Lucide React"
   ],
-  link: "https://your-expensetrack.vercel.app", // Apna live Vercel link
-  github: "https://expense-tracker-9cu8.vercel.app/", // Apna GitHub repo link
+  link: "https://expense-tracker-9cu8.vercel.app/login", // Apna live Vercel link
+  github: "https://github.com/usamaanwr/expense-tracker", // Apna GitHub repo link
 },
   {
     title: "Authentication System",
