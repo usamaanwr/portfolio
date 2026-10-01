@@ -1,13 +1,19 @@
 const projectData = [
   {
-    title: "Riwaya Store",
-    description:
-      "A responsive e-commerce website built with HTML, CSS, and JavaScript. Features product categories, shopping cart, and contact form..",
-    tech: ["Html5", "css3", "javascript", "sweetalert2"],
-    image: "",
-    link: "https://riwa.netlify.app",
-    github: "https://github.com/usamaanwr/Riwaya-Store",
-  },
+  title: "ExpenseTrack — PWA",
+  description:
+    "A full-stack progressive web application for real-time personal budget management and visual analytics. Features secure Supabase authentication, automated safe daily spending limits, inline transaction editing, and printable statement exports.",
+  tech: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Supabase",
+    "PWA",
+    "Lucide React"
+  ],
+  link: "https://your-expensetrack.vercel.app", // Apna live Vercel link
+  github: "https://expense-tracker-9cu8.vercel.app/", // Apna GitHub repo link
+},
   {
     title: "Authentication System",
     description:
