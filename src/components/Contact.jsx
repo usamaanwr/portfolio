@@ -82,7 +82,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-xs font-mono text-slate-400 uppercase tracking-wider">Email Me</h4>
                   <a href="mailto:anweru98@gmail.com" className="text-white font-bold text-sm lg:text-base hover:text-blue-400 transition-colors">
-                    anweru98@gmail.com
+                    osamadev48@gmail.com
                   </a>
                 </div>
               </div>
