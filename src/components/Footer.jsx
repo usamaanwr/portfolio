@@ -46,7 +46,7 @@ const Footer = () => {
             </a>
 
             <a 
-              href="https://x.com/UsamaAnweru98" 
+              href="https://x.com/osamadev_builds" 
               target="_blank" 
               rel="noreferrer" 
               title="Twitter (X)"
@@ -56,7 +56,7 @@ const Footer = () => {
             </a>
 
             <a 
-              href="https://www.instagram.com/usamasheikh7208/?hl=en" 
+              href="https://www.instagram.com/osamadev_builds/" 
               target="_blank" 
               rel="noreferrer" 
               title="Instagram"
