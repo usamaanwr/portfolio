@@ -30,10 +30,13 @@ const projectData = [
     link: "https://authentication-a3fc.vercel.app",
     github: "https://github.com/usamaanwr/authentication",
   },
-  {
-   title: "ARCO Bath – Luxury E-Commerce Framework",
+  
+{
+  title: "ARCO Bath – Sanitary Ware Business Website",
+
   description:
-    "A high-end architectural sanitary ware platform engineered with an e-commerce-inspired UI framework. Developed as a lightning-fast static experience incorporating a dynamic video reel component (Showroom Stories) for product immersion, DaisyUI for sleek theme consistency, and complete form automation via Web3Forms integration.",
+    "A responsive website developed for a Pakistani sanitary ware business to showcase its product collection and brand. The website features a clean product showcase, showroom video section, and contact form integration using Web3Forms, making it easy for customers to explore products and get in touch with the business.",
+
   tech: [
     "React.js",
     "Vite",
@@ -41,11 +44,14 @@ const projectData = [
     "DaisyUI",
     "Web3Forms API",
     "React Icons",
-    "Cloudinary (Media)"
+    "Cloudinary"
   ],
-    link: "https://arco-bath.com/",
-    github: "https://github.com/usamaanwr/sanitaryStore",
-  },
+
+  link: "https://arco-bath.com/",
+
+  github: "https://github.com/usamaanwr/sanitaryStore",
+}
+,
  {
   title: "estate-hub",
   description:
