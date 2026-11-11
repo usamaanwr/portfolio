@@ -21,12 +21,23 @@ const About = () => {
           viewport={{ once: true }}
           className="space-y-6"
         >
-          <p className="text-slate-400 text-lg leading-relaxed">
-            I am a <span className="text-white font-bold">MERN Stack Developer</span> who has spent the last 15 months deeply focused on learning how to build modern web applications. My daily routine involves working with MongoDB, Express.js, React, and Node.js to understand the full lifecycle of a project.
+      <p className="text-slate-400 text-lg leading-relaxed">
+            I can work on both frontend and backend development, from creating
+            responsive user interfaces to building REST APIs, handling
+            authentication, and managing databases.
           </p>
 
           <p className="text-slate-400 text-lg leading-relaxed">
-            Right now, my main goal is to transition into the professional industry. I have spent a lot of time practicing and sharpening my coding skills, and I am now ready to take on real-world challenges where I can contribute and keep growing as a developer.
+            I have applied these skills in my own development projects,
+            working on different features and connecting frontend interfaces
+            with backend functionality. I focus on writing clean code,
+            building responsive layouts, and making sure applications
+            work as expected.
+          </p>
+
+           <p className="text-slate-400 text-lg leading-relaxed">
+            I'm looking for opportunities where I can use my development
+            skills, contribute to a team, and work on real-world web applications.
           </p>
         </motion.div>
 
