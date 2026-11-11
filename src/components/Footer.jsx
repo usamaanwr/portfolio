@@ -19,7 +19,7 @@ const Footer = () => {
               OSAMA<span className="text-blue-500">.</span>
             </h2>
             <p className="text-slate-400 text-xs font-mono mt-1">
-              Full-Stack Web Developer (MERN)
+              MERN Stack Developer
             </p>
           </div>
 
@@ -36,7 +36,7 @@ const Footer = () => {
             </a>
 
             <a 
-              href="https://www.linkedin.com/in/muhammad-osama-125213292/" 
+              href="https://www.linkedin.com/in/osamadev-builds/" 
               target="_blank" 
               rel="noreferrer" 
               title="LinkedIn"
@@ -68,7 +68,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-slate-500 text-xs font-mono">
-            &copy; {currentYear} Designed & Built by <span className="text-slate-300 font-bold">Osama</span>
+            &copy; {currentYear}  Built & Designed by <span className="text-slate-300 font-bold">Osama</span>
           </div>
 
         </div>
